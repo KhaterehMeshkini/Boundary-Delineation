@@ -9,16 +9,16 @@ from torch.utils.data import DataLoader, Dataset
 import torchvision.transforms.functional as F
 from skimage.morphology import medial_axis, opening, closing, skeletonize, dilation, erosion, square
 import rasterio
-import filemanager as fm
+import utils.filemanager as fm
 
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, cohen_kappa_score
 from PIL import Image
-from model_att import DynamicAttentionUNet3D
+from models.model_att import DynamicAttentionUNet3D
 import random
 from torch.optim.lr_scheduler import StepLR
 from tqdm import tqdm
 import tifffile as tiff
-from util import accuracy_check_for_batch, compute_iou, CombinedCELSSIMLoss, postprocess_boundary, thin_boundaries, evaluate_boundary_quality
+from utils.util import accuracy_check_for_batch, compute_iou, CombinedCELSSIMLoss, postprocess_boundary, thin_boundaries, evaluate_boundary_quality
 from os.path import splitext
 import time
 from collections import defaultdict
