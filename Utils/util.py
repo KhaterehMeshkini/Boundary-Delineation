@@ -1,6 +1,4 @@
 #from post_processing import *
-import numpy as np
-from PIL import Image
 import glob as gl
 import numpy as np
 from PIL import Image
